@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:drools="http://www.jboss.org/drools" id="_ncS1oKqLEeecVZnjRvmOpQ" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="6.2.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
+  <bpmn2:itemDefinition id="__milestoneTask_TaskNameInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__milestoneTask_ConditionInputXItem" structureRef="Object"/>
+  <bpmn2:process id="SIM.Subcaso" drools:adHoc="true" drools:packageName="com.myteam.sim" drools:version="1.0" name="Subcaso" isExecutable="true">
+    <bpmn2:extensionElements>
+      <drools:metaData name="customCaseIdPrefix">
+        <drools:metaValue><![CDATA[subcaso]]></drools:metaValue>
+      </drools:metaData>
+    </bpmn2:extensionElements>
+    <bpmn2:task id="_milestoneTask" drools:selectable="true" drools:taskName="Milestone" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Milestone">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Milestone]]></drools:metaValue>
+        </drools:metaData>
+        <drools:metaData name="customAutoStart">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ncS1oaqLEeecVZnjRvmOpQ">
+        <bpmn2:dataInput id="_milestoneTask_TaskNameInputX" drools:dtype="String" itemSubjectRef="__milestoneTask_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="_milestoneTask_ConditionInputX" drools:dtype="Object" itemSubjectRef="__milestoneTask_ConditionInputXItem" name="Condition"/>
+        <bpmn2:inputSet id="_ncS1oqqLEeecVZnjRvmOpQ">
+          <bpmn2:dataInputRefs>_milestoneTask_ConditionInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_milestoneTask_TaskNameInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ncS1o6qLEeecVZnjRvmOpQ"/>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ncS1pKqLEeecVZnjRvmOpQ">
+        <bpmn2:targetRef>_milestoneTask_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_ncS1paqLEeecVZnjRvmOpQ">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_ncS1pqqLEeecVZnjRvmOpQ"><![CDATA[Milestone]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_ncS1p6qLEeecVZnjRvmOpQ">_milestoneTask_TaskNameInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_ncS1qKqLEeecVZnjRvmOpQ">
+        <bpmn2:targetRef>_milestoneTask_ConditionInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_ncS1qaqLEeecVZnjRvmOpQ">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_ncS1qqqLEeecVZnjRvmOpQ"></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_ncS1q6qLEeecVZnjRvmOpQ">_milestoneTask_ConditionInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:task>
+    <bpmn2:scriptTask id="_768C72BC-CD2F-4197-ACE6-8CBF5F18F58F" drools:selectable="true" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Log" scriptFormat="http://www.java.com/java">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Log]]></drools:metaValue>
+        </drools:metaData>
+        <drools:metaData name="customAutoStart">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:script><![CDATA[System.out.println("Entrou no subcaso");]]></bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:userTask id="_DDDBBF10-8BC1-462C-84E3-270391DBEAA3" drools:selectable="true" drools:scriptFormat="http://www.java.com/java" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Tarefa SubCaso">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Tarefa SubCaso]]></drools:metaValue>
+        </drools:metaData>
+        <drools:metaData name="customAutoStart">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ncS1rKqLEeecVZnjRvmOpQ">
+        <bpmn2:dataInput id="_DDDBBF10-8BC1-462C-84E3-270391DBEAA3_SkippableInputX" name="Skippable"/>
+        <bpmn2:inputSet id="_ncS1raqLEeecVZnjRvmOpQ">
+          <bpmn2:dataInputRefs>_DDDBBF10-8BC1-462C-84E3-270391DBEAA3_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ncS1rqqLEeecVZnjRvmOpQ"/>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ncS1r6qLEeecVZnjRvmOpQ">
+        <bpmn2:targetRef>_DDDBBF10-8BC1-462C-84E3-270391DBEAA3_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_ncS1sKqLEeecVZnjRvmOpQ">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_ncS1saqLEeecVZnjRvmOpQ">true</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_ncS1sqqLEeecVZnjRvmOpQ">_DDDBBF10-8BC1-462C-84E3-270391DBEAA3_SkippableInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:potentialOwner id="_ncS1s6qLEeecVZnjRvmOpQ">
+        <bpmn2:resourceAssignmentExpression id="_ncS1tKqLEeecVZnjRvmOpQ">
+          <bpmn2:formalExpression id="_ncS1taqLEeecVZnjRvmOpQ">denise.lezo</bpmn2:formalExpression>
+        </bpmn2:resourceAssignmentExpression>
+      </bpmn2:potentialOwner>
+    </bpmn2:userTask>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="_ncTcsKqLEeecVZnjRvmOpQ">
+    <bpmndi:BPMNPlane id="_ncTcsaqLEeecVZnjRvmOpQ" bpmnElement="SIM.Subcaso">
+      <bpmndi:BPMNShape id="_ncTcsqqLEeecVZnjRvmOpQ" bpmnElement="_milestoneTask">
+        <dc:Bounds height="80.0" width="100.0" x="90.0" y="90.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_ncTcs6qLEeecVZnjRvmOpQ" bpmnElement="_768C72BC-CD2F-4197-ACE6-8CBF5F18F58F">
+        <dc:Bounds height="80.0" width="100.0" x="90.0" y="206.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_ncTctKqLEeecVZnjRvmOpQ" bpmnElement="_DDDBBF10-8BC1-462C-84E3-270391DBEAA3">
+        <dc:Bounds height="80.0" width="100.0" x="240.0" y="165.0"/>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmn2:relationship id="_ncTctaqLEeecVZnjRvmOpQ" type="BPSimData">
+    <bpmn2:extensionElements>
+      <bpsim:BPSimData>
+        <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
+          <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters" baseTimeUnit="min"/>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_milestoneTask" id="_ncTctqqLEeecVZnjRvmOpQ">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_768C72BC-CD2F-4197-ACE6-8CBF5F18F58F" id="_ncTct6qLEeecVZnjRvmOpQ">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_DDDBBF10-8BC1-462C-84E3-270391DBEAA3" id="_ncTcuKqLEeecVZnjRvmOpQ">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="8.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="1.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+        </bpsim:Scenario>
+      </bpsim:BPSimData>
+    </bpmn2:extensionElements>
+    <bpmn2:source>_ncS1oKqLEeecVZnjRvmOpQ</bpmn2:source>
+    <bpmn2:target>_ncS1oKqLEeecVZnjRvmOpQ</bpmn2:target>
+  </bpmn2:relationship>
+</bpmn2:definitions>
