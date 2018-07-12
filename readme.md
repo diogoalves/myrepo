@@ -1,6 +1,6 @@
-# 
+BPM and Case-management experiments with JBPM 7
 
-# presentations
+### presentations
 
 - [Exemplo de Case Management no JBPM7, dissecando o ITORDERS em 25/set/17](https://docs.google.com/presentation/d/e/2PACX-1vQb-7hZ3lm24Aycbk4Rz-dT9i4ASkC-HyOOTAfhAMdmEBdSWVi6KnfSUOKQIthPye44pH8SqtvAvTZX/pub?start=false&loop=false&delayms=3000)
 - [Caso Diligência v0, set/17](https://docs.google.com/presentation/d/e/2PACX-1vQFx6VSW76VHQs6MPPAeKn-MbTdG2NakA-3dcjbziuz2wXGnIZfqOPgyMbYqr3ZxT395k_-8UQc20Ij/pub?start=false&loop=false&delayms=3000)
