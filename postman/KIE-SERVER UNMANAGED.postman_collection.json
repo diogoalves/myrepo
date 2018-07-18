@@ -1,0 +1,823 @@
+{
+	"info": {
+		"_postman_id": "1166d6cb-a2ed-bf00-099f-6afe8367058b",
+		"name": "KIE-SERVER UNMANAGED",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Execution Server Information",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "kiecontrolleruser",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "kiecontrolleruser1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llY29udHJvbGxlcnVzZXI6a2llY29udHJvbGxlcnVzZXIxIQ=="
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Containers",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "kiecontrolleruser",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "kiecontrolleruser1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llY29udHJvbGxlcnVzZXI6a2llY29udHJvbGxlcnVzZXIxIQ=="
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http:///localhost:8080/kie-server/services/rest/server/containers/br.gov.ancine:sin-bpm-process:0.0.3/",
+					"host": [
+						"http:"
+					],
+					"port": "",
+					"path": [
+						"",
+						"",
+						"localhost:8080",
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"br.gov.ancine:sin-bpm-process:0.0.3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria Container",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJILW5QTkVlXzlMbmlNbFh4dFdwdGVPUEkwR0c4MzJzTHZ6MG9mcHRyQmxjIn0.eyJqdGkiOiJmYmFkZTY0YS0zN2M1LTRkY2YtYjRhOS04ODk4NjU4MGUzMjAiLCJleHAiOjE1MDE3OTY2NTAsIm5iZiI6MCwiaWF0IjoxNTAxNzk2MzUwLCJpc3MiOiJodHRwOi8vc3NvLmFuY2luZS5nb3YuYnI6ODE4MC9hdXRoL3JlYWxtcy9hbmNpbmUiLCJhdWQiOiJzaW4td2ViLWV4dGVybm8iLCJzdWIiOiJmMDQzNjc5Zi1iZThlLTQ0MjEtODE0YS04N2EwYThiOTdmMDMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzaW4td2ViLWV4dGVybm8iLCJub25jZSI6Ijg4NzY0NDNkLTA2NDMtNGM4NC04MTA2LTViZjU1YjIwZDM5MSIsImF1dGhfdGltZSI6MTUwMTc5NjM0OSwic2Vzc2lvbl9zdGF0ZSI6IjBmM2RhZGNiLWZkMWYtNGYxYy1hYTQxLTI1N2EyY2U0MTgzYiIsImFjciI6IjEiLCJjbGllbnRfc2Vzc2lvbiI6ImEyZjQ4MjJjLTI5ODMtNDY4Mi1hMDQwLTA1NGFhYmE5M2E2NSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjgwODAvZXh0ZXJuYWwiLCIqIiwiaHR0cDovLzE5Mi4xNjguMjEuNDQ6OTAwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsia2llbWdtdCIsInJlc3QtYWxsIiwidW1hX2F1dGhvcml6YXRpb24iLCJraWUtc2VydmVyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctcHJvZmlsZSJdfX0sIm5hbWUiOiIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjb250cm9sbGVydXNlciJ9.I-klbbcCMjZEkQ-qybPIoAOLuLwDhFYokUXdidd8FVCjwLWhpIykMdWzj0UXEq10LkEQljQCFe3_vzR70kBVOaEXAh42ftxeBikDNtzmLiQ5MgGSZ8bmAEkcFIvje2Pbz7d_xW_jZVUOS3isV9tqb76TP-kzNMNcAUry6CalItiPm82zJSPx3J9W4hxy0Wj-wNEWh3PQSGWypBT43NhXaVtBlx63mhCead5Oe3dbJumPdg6w4rHcp4h-4QoeNBRLjVOyJm6tuXv7gOPkqRNcrKnm46bRLyRDIhkL84oro-O0D6uqf22GwYoCwo7fMtcgAbcjG8MF3NVKrxKvNsQCJQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"commands\": [\n        {\n            \"create-container\": {\n                \"container\": {\n                    \"status\": null,\n                    \"messages\": [],\n                    \"container-id\": \"br.gov.ancine:sin-bpm-process:0.0.3\",\n                    \"release-id\": {\n                        \"version\": \"0.0.3\",\n                        \"group-id\": \"br.gov.ancine\",\n                        \"artifact-id\": \"sin-bpm-process\"\n                    },\n                    \"config-items\": [\n                        {\n                            \"itemName\": \"KBase\",\n                            \"itemValue\": \"\",\n                            \"itemType\": \"BPM\"\n                        },\n                        {\n                            \"itemName\": \"KSession\",\n                            \"itemValue\": \"\",\n                            \"itemType\": \"BPM\"\n                        },\n                        {\n                            \"itemName\": \"MergeMode\",\n                            \"itemValue\": \"MERGE_COLLECTIONS\",\n                            \"itemType\": \"BPM\"\n                        },\n                        {\n                            \"itemName\": \"RuntimeStrategy\",\n                            \"itemValue\": \"PER_PROCESS_INSTANCE\",\n                            \"itemType\": \"BPM\"\n                        }\n                    ]\n                }\n            }\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/config",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"config"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista definições processos",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "kiecontrolleruser",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "kiecontrolleruser1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llY29udHJvbGxlcnVzZXI6a2llY29udHJvbGxlcnVzZXIxIQ=="
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http:///localhost:8080/kie-server/services/rest/server/queries/processes/definitions",
+					"host": [
+						"http:"
+					],
+					"port": "",
+					"path": [
+						"",
+						"",
+						"localhost:8080",
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"queries",
+						"processes",
+						"definitions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista instâncias de processo",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "kiecontrolleruser",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "kiecontrolleruser1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llY29udHJvbGxlcnVzZXI6a2llY29udHJvbGxlcnVzZXIxIQ=="
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http:///localhost:8080/kie-server/services/rest/server/queries/processes/instances",
+					"host": [
+						"http:"
+					],
+					"port": "",
+					"path": [
+						"",
+						"",
+						"localhost:8080",
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"queries",
+						"processes",
+						"instances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista instância processo",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "kiecontrolleruser",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "kiecontrolleruser1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llY29udHJvbGxlcnVzZXI6a2llY29udHJvbGxlcnVzZXIxIQ=="
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http:///localhost:8080/kie-server/services/rest/server/queries/processes/instances/33",
+					"host": [
+						"http:"
+					],
+					"port": "",
+					"path": [
+						"",
+						"",
+						"localhost:8080",
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"queries",
+						"processes",
+						"instances",
+						"33"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Variáveis instância processo",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "kiecontrolleruser",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "kiecontrolleruser1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llY29udHJvbGxlcnVzZXI6a2llY29udHJvbGxlcnVzZXIxIQ=="
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http:///localhost:8080/kie-server/services/rest/server/queries/processes/instances/65/variables/instances",
+					"host": [
+						"http:"
+					],
+					"port": "",
+					"path": [
+						"",
+						"",
+						"localhost:8080",
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"queries",
+						"processes",
+						"instances",
+						"65",
+						"variables",
+						"instances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista task por id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "kiecontrolleruser",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "kiecontrolleruser1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llY29udHJvbGxlcnVzZXI6a2llY29udHJvbGxlcnVzZXIxIQ=="
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http:///localhost:8080/kie-server/services/rest/server/queries/tasks/instances/33",
+					"host": [
+						"http:"
+					],
+					"port": "",
+					"path": [
+						"",
+						"",
+						"localhost:8080",
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"queries",
+						"tasks",
+						"instances",
+						"33"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista tasks por usuário",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "kiecontrolleruser",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "kiecontrolleruser1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llY29udHJvbGxlcnVzZXI6a2llY29udHJvbGxlcnVzZXIxIQ=="
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/queries/tasks/instances?user=coord_triagem_1",
+					"host": [
+						"http:"
+					],
+					"port": "",
+					"path": [
+						"",
+						"",
+						"localhost:8080",
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"queries",
+						"tasks",
+						"instances"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "coord_triagem_1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Claim taskid",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJILW5QTkVlXzlMbmlNbFh4dFdwdGVPUEkwR0c4MzJzTHZ6MG9mcHRyQmxjIn0.eyJqdGkiOiJlYzIxNDhjYS0wZGUyLTQ5ODktYmRhMi02NTlhYTcxZDA3YzIiLCJleHAiOjE1MDIzMDU4MjAsIm5iZiI6MCwiaWF0IjoxNTAyMzA1NTIwLCJpc3MiOiJodHRwOi8vc3NvLmFuY2luZS5nb3YuYnI6ODE4MC9hdXRoL3JlYWxtcy9hbmNpbmUiLCJhdWQiOiJzaW4td2ViLWV4dGVybm8iLCJzdWIiOiI0Y2UxYzlmZS1hYmI5LTRkMTctYWQ5MC1lZTgyNDAzYjg1YTYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzaW4td2ViLWV4dGVybm8iLCJub25jZSI6IjMxMDU1MGY1LTBlNDItNDhmNy05OTY1LTZjNWMwMWViN2JiZiIsImF1dGhfdGltZSI6MTUwMjMwNTQ1Miwic2Vzc2lvbl9zdGF0ZSI6IjMwOTgyYWJkLTkxYzEtNDE3Yi1hNDM5LTgyN2Y2MDE5Njg1MyIsImFjciI6IjAiLCJjbGllbnRfc2Vzc2lvbiI6IjE5YzU5NTdlLWEwM2ItNDhlZS05Yzc2LWNjYzliNWNjOWRiYiIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjgwODAvZXh0ZXJuYWwiLCIqIiwiaHR0cDovLzE5Mi4xNjguMjEuNDQ6OTAwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsicGVyZmlsRGVUZXN0ZSIsImNhYyIsInJlc3BvbnNhdmVpc0RlbWFpc1Byb3ZpZGVuY2lhcyIsImFkbWluIiwiYW5hbGlzdGFEaXJlaXRvIiwiZGlyZXRvciIsInJlc3BvbnNhdmVpc1JlY3Vyc28iLCJzaW4iLCJraWUtc2VydmVyIiwiU0lNX0NPT1JEX1RSSUFHRU0iLCJraWVtZ210IiwicHJvamV0by1zZXJ2aWNvcy1hcGkiLCJtYW5hZ2VyIiwiYW5hbGlzdGFUcmlhZ2VtIiwic3VwZXJpbnRlbmRlbmNpYSIsInJlZGhhdCIsInJlc3BvbnNhdmVsUHVibGljaXphY2FvRE9VIiwiYW5hbGlzdGFUZWNuaWNvIiwiYW5hbHlzdCIsInJlc3QtYWxsIiwiQWRtaW5pc3RyYXRvcnMiLCJkZXZlbG9wZXIiLCJkaXJldG9yaWEiLCJTSU1fQ09PUkRfQU5BTElTRV9URUNOSUNBIiwidXNlciIsIlNJTV9TVVBfRk9NRU5UTyIsIlNJTV9DT09SRF9BTkFMSVNFX0RJUkVJVE9TIiwiU0lNX1BST1BPTkVOVEUiXX0sInJlc291cmNlX2FjY2VzcyI6eyJzaW4td2ViLWFwaSI6eyJyb2xlcyI6WyJzaW4iXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19LCJuYW1lIjoiQ29vcmRlbmFkb3IgZGUgVHJpYWdlbSAxIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiY29vcmRfdHJpYWdlbV8xIiwiZ2l2ZW5fbmFtZSI6IkNvb3JkZW5hZG9yIiwiZmFtaWx5X25hbWUiOiJkZSBUcmlhZ2VtIDEifQ.XuVyaGfuBoNDtoQgYGIBzVVboTY5xgS9HvWv0TKsptXp2Q6UqpETo0ccMwDR793rfkKs7eWzE3RoKn88jd311bUQAmzTCQ9xJsmNv61fUWqBqR0s8DZ9f9udCGOfKwIgT2PRdy6YGTSJoFHe6Zwv5yK_gBpHhwziaV4-vTx14uXyHk7FbkmUDIBcQpm-NgN-XAjifRVxECx3hBXqt_sXHFVwwkcT57Pw_aXEq2840yd7YcUf7aDor1KuthRkxzBJWpyryE3iczwmJyI1vVntRiAtjVBxkTGMZNa9xfeRcvljOVn7g50OXf6F9wTqEOIaUKuqWB7KxBl-YngQdMEbwg"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/containers/br.gov.ancine:sin-bpm-process:0.0.3/tasks/33/states/claimed?user=coord_triagem_1",
+					"host": [
+						"http:"
+					],
+					"port": "",
+					"path": [
+						"",
+						"",
+						"localhost:8080",
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"br.gov.ancine:sin-bpm-process:0.0.3",
+						"tasks",
+						"33",
+						"states",
+						"claimed"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "coord_triagem_1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Start taskid",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJILW5QTkVlXzlMbmlNbFh4dFdwdGVPUEkwR0c4MzJzTHZ6MG9mcHRyQmxjIn0.eyJqdGkiOiJlYzIxNDhjYS0wZGUyLTQ5ODktYmRhMi02NTlhYTcxZDA3YzIiLCJleHAiOjE1MDIzMDU4MjAsIm5iZiI6MCwiaWF0IjoxNTAyMzA1NTIwLCJpc3MiOiJodHRwOi8vc3NvLmFuY2luZS5nb3YuYnI6ODE4MC9hdXRoL3JlYWxtcy9hbmNpbmUiLCJhdWQiOiJzaW4td2ViLWV4dGVybm8iLCJzdWIiOiI0Y2UxYzlmZS1hYmI5LTRkMTctYWQ5MC1lZTgyNDAzYjg1YTYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzaW4td2ViLWV4dGVybm8iLCJub25jZSI6IjMxMDU1MGY1LTBlNDItNDhmNy05OTY1LTZjNWMwMWViN2JiZiIsImF1dGhfdGltZSI6MTUwMjMwNTQ1Miwic2Vzc2lvbl9zdGF0ZSI6IjMwOTgyYWJkLTkxYzEtNDE3Yi1hNDM5LTgyN2Y2MDE5Njg1MyIsImFjciI6IjAiLCJjbGllbnRfc2Vzc2lvbiI6IjE5YzU5NTdlLWEwM2ItNDhlZS05Yzc2LWNjYzliNWNjOWRiYiIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjgwODAvZXh0ZXJuYWwiLCIqIiwiaHR0cDovLzE5Mi4xNjguMjEuNDQ6OTAwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsicGVyZmlsRGVUZXN0ZSIsImNhYyIsInJlc3BvbnNhdmVpc0RlbWFpc1Byb3ZpZGVuY2lhcyIsImFkbWluIiwiYW5hbGlzdGFEaXJlaXRvIiwiZGlyZXRvciIsInJlc3BvbnNhdmVpc1JlY3Vyc28iLCJzaW4iLCJraWUtc2VydmVyIiwiU0lNX0NPT1JEX1RSSUFHRU0iLCJraWVtZ210IiwicHJvamV0by1zZXJ2aWNvcy1hcGkiLCJtYW5hZ2VyIiwiYW5hbGlzdGFUcmlhZ2VtIiwic3VwZXJpbnRlbmRlbmNpYSIsInJlZGhhdCIsInJlc3BvbnNhdmVsUHVibGljaXphY2FvRE9VIiwiYW5hbGlzdGFUZWNuaWNvIiwiYW5hbHlzdCIsInJlc3QtYWxsIiwiQWRtaW5pc3RyYXRvcnMiLCJkZXZlbG9wZXIiLCJkaXJldG9yaWEiLCJTSU1fQ09PUkRfQU5BTElTRV9URUNOSUNBIiwidXNlciIsIlNJTV9TVVBfRk9NRU5UTyIsIlNJTV9DT09SRF9BTkFMSVNFX0RJUkVJVE9TIiwiU0lNX1BST1BPTkVOVEUiXX0sInJlc291cmNlX2FjY2VzcyI6eyJzaW4td2ViLWFwaSI6eyJyb2xlcyI6WyJzaW4iXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19LCJuYW1lIjoiQ29vcmRlbmFkb3IgZGUgVHJpYWdlbSAxIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiY29vcmRfdHJpYWdlbV8xIiwiZ2l2ZW5fbmFtZSI6IkNvb3JkZW5hZG9yIiwiZmFtaWx5X25hbWUiOiJkZSBUcmlhZ2VtIDEifQ.XuVyaGfuBoNDtoQgYGIBzVVboTY5xgS9HvWv0TKsptXp2Q6UqpETo0ccMwDR793rfkKs7eWzE3RoKn88jd311bUQAmzTCQ9xJsmNv61fUWqBqR0s8DZ9f9udCGOfKwIgT2PRdy6YGTSJoFHe6Zwv5yK_gBpHhwziaV4-vTx14uXyHk7FbkmUDIBcQpm-NgN-XAjifRVxECx3hBXqt_sXHFVwwkcT57Pw_aXEq2840yd7YcUf7aDor1KuthRkxzBJWpyryE3iczwmJyI1vVntRiAtjVBxkTGMZNa9xfeRcvljOVn7g50OXf6F9wTqEOIaUKuqWB7KxBl-YngQdMEbwg"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/containers/br.gov.ancine:sin-bpm-process:0.0.3/tasks/33/states/started?user=coord_triagem_1",
+					"host": [
+						"http:"
+					],
+					"port": "",
+					"path": [
+						"",
+						"",
+						"localhost:8080",
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"br.gov.ancine:sin-bpm-process:0.0.3",
+						"tasks",
+						"33",
+						"states",
+						"started"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "coord_triagem_1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria intância processo direto no kieserver",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "controllerUser",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "controllerUser1234;",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic Y29udHJvbGxlclVzZXI6Y29udHJvbGxlclVzZXIxMjM0Ow=="
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/containers/br.gov.ancine:sin-bpm-process:0.0.3/processes/sin-bpm-process.ProcessoNotificarViaEmail/instances",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"br.gov.ancine:sin-bpm-process:0.0.3",
+						"processes",
+						"sin-bpm-process.ProcessoNotificarViaEmail",
+						"instances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar instancia processo passando objetos",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "controllerUser",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "controllerUser1234;",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic Y29udHJvbGxlclVzZXI6Y29udHJvbGxlclVzZXIxMjM0Ow=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"solicitacao\": {\n      \"br.gov.ancine.sin.bpm.model.Solicitacao\" : {\n        \"solicitacaoTipo\": \"Envio projeto\",\n        \"projetoTitulo\": \"Tropa de Elite 25\",\n        \"projetoTipologia\": \"FICÇÃO\",\n        \"projetoSegmentoMercado\": \"SALAS DE EXIBIÇÃO\",\n        \"projetoFormato\": \"LONGA-METRAGEM\",\n        \"objetoTipo\": \"DESENVOLVIMENTO\"\n    }\n  },\n  \"taskMetadata\" : {\n      \"br.gov.ancine.sin.bpm.model.MetaTask\" : {\n          \"perfilResponsavel\":\"SIM_COORD_TRIAGEM\",\n          \"nomeExibicaoTarefa\":\"Distribuir projeto para triagem\",\n          \"codigoTarefa\":\"Distribuir projeto para triagem\",\n        \"usuarioCriador\":\"proponente.user\",\n          \"descricaoTarefa\":\"Descrição de exemplo\"\n      }\n  }\n}\n\n\n\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/containers/br.gov.ancine:sin-bpm-process:0.0.3/processes/sin-bpm-process.processoatendimentosolicitacoes/instances",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"br.gov.ancine:sin-bpm-process:0.0.3",
+						"processes",
+						"sin-bpm-process.processoatendimentosolicitacoes",
+						"instances"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

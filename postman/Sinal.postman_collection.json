@@ -1,0 +1,535 @@
+{
+	"info": {
+		"_postman_id": "582a0491-1ac3-0267-647e-24e51805d936",
+		"name": "Sinal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cria caso",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "denise.lezo",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "ancine1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZGVuaXNlLmxlem86YW5jaW5lMSE="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"case-data\" : {  },\n  \"case-user-assignments\" : {\n    \"owner\" : \"denise.lezo\"\n  }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-execution-server/services/rest/server/containers/SIM_1.0/cases/SIM.Sinal/instances",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-execution-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"SIM_1.0",
+						"cases",
+						"SIM.Sinal",
+						"instances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista instâncias",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "denise.lezo",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "ancine1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZGVuaXNlLmxlem86YW5jaW5lMSE="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-execution-server/services/rest/server/containers/SIM_1.0/cases/SIM.Sinal/instances",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-execution-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"SIM_1.0",
+						"cases",
+						"SIM.Sinal",
+						"instances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Minhas Tarefas do caso",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "denise.lezo",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "ancine1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZGVuaXNlLmxlem86YW5jaW5lMSE="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\" : \"RequestManagerApproval\",\n \"data\" : {\n   \"reason\" : \"Fixed hardware spec\"\n  }, \n \"description\" : \"Ask for manager approval again\",\n \"actors\" : \"diligenciado\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-execution-server/services/rest/server/queries/cases/instances/{{sinal}}/tasks/instances/pot-owners",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-execution-server",
+						"services",
+						"rest",
+						"server",
+						"queries",
+						"cases",
+						"instances",
+						"{{sinal}}",
+						"tasks",
+						"instances",
+						"pot-owners"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista definições de processos",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "denise.lezo",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "ancine1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZGVuaXNlLmxlem86YW5jaW5lMSE="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\" : \"RequestManagerApproval\",\n \"data\" : {\n   \"reason\" : \"Fixed hardware spec\"\n  }, \n \"description\" : \"Ask for manager approval again\",\n \"actors\" : \"diligenciado\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-execution-server/services/rest/server/containers/SIM_1.0/processes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-execution-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"SIM_1.0",
+						"processes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista instâncias de processos",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "denise.lezo",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "ancine1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZGVuaXNlLmxlem86YW5jaW5lMSE="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\" : \"RequestManagerApproval\",\n \"data\" : {\n   \"reason\" : \"Fixed hardware spec\"\n  }, \n \"description\" : \"Ask for manager approval again\",\n \"actors\" : \"diligenciado\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-execution-server/services/rest/server/containers/SIM_1.0/processes/instances",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-execution-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"SIM_1.0",
+						"processes",
+						"instances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista instância específica de processos",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "denise.lezo",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "ancine1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZGVuaXNlLmxlem86YW5jaW5lMSE="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\" : \"RequestManagerApproval\",\n \"data\" : {\n   \"reason\" : \"Fixed hardware spec\"\n  }, \n \"description\" : \"Ask for manager approval again\",\n \"actors\" : \"diligenciado\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-execution-server/services/rest/server/containers/SIM_1.0/processes/instances/41/signals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-execution-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"SIM_1.0",
+						"processes",
+						"instances",
+						"41",
+						"signals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enviando sinal",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "denise.lezo",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "ancine1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZGVuaXNlLmxlem86YW5jaW5lMSE="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "true"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-execution-server/services/rest/server/containers/SIM_1.0/processes/instances/41/signal/Sinal5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-execution-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"SIM_1.0",
+						"processes",
+						"instances",
+						"41",
+						"signal",
+						"Sinal5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fecha caso",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"fechou \"\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-execution-server/services/rest/server/containers/SIM_1.0/cases/instances/{{caso}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-execution-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"SIM_1.0",
+						"cases",
+						"instances",
+						"{{caso}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

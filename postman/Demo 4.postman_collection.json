@@ -1,0 +1,455 @@
+{
+	"info": {
+		"_postman_id": "95068510-a507-a7e4-938b-b9477e22c56b",
+		"name": "Demo 4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cria Solicitacao",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "denise.lezo",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "ancine1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZGVuaXNlLmxlem86YW5jaW5lMSE="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"case-data\" : { \n    \"Tipo\" : \"Solicitação de Aprovação Renúncia Fiscal.\",\n    \"Payload\": \"Orcamento: R$ 1.000.000,00\"\n  },\n  \"case-user-assignments\" : {\n    \"owner\" : \"denise.lezo\",\n    \"requisitante\" : \"MRPLOT\",\n    \"gerente\" : \"denise.lezo\"\n  },\n  \"case-group-assignments\" : {\n    \"analista\" : \"SIM_COORD_TRIAGEM\"\n }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-execution-server/services/rest/server/containers/SIM_1.0/cases/SIM.SolicitaFinanciamento/instances",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-execution-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"SIM_1.0",
+						"cases",
+						"SIM.SolicitaFinanciamento",
+						"instances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista instâncias",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "denise.lezo",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "ancine1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZGVuaXNlLmxlem86YW5jaW5lMSE="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-execution-server/services/rest/server/containers/SIM_1.0/cases/SIM.SolicitaFinanciamento/instances",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-execution-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"SIM_1.0",
+						"cases",
+						"SIM.SolicitaFinanciamento",
+						"instances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Instância (completa)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"case-data\" : { \n    \"descricao\" : \"Por favor esclareça o item XYZ do desenho de produção.\",\n    \"prazo\": \"230\"\n  },\n  \"case-user-assignments\" : {\n    \"owner\" : \"coord.triagem.1\",\n    \"diligenciado\" : \"proponente.user.1\"\n  }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-execution-server/services/rest/server/containers/SIM_1.0/cases/instances/{{solicitacao}}?withMilestones=true&withRoles=true&withData=true&withStages=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-execution-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"SIM_1.0",
+						"cases",
+						"instances",
+						"{{solicitacao}}"
+					],
+					"query": [
+						{
+							"key": "withMilestones",
+							"value": "true"
+						},
+						{
+							"key": "withRoles",
+							"value": "true"
+						},
+						{
+							"key": "withData",
+							"value": "true"
+						},
+						{
+							"key": "withStages",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Minhas Tarefas do caso",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "denise.lezo",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "ancine1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZGVuaXNlLmxlem86YW5jaW5lMSE="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\" : \"RequestManagerApproval\",\n \"data\" : {\n   \"reason\" : \"Fixed hardware spec\"\n  }, \n \"description\" : \"Ask for manager approval again\",\n \"actors\" : \"diligenciado\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-execution-server/services/rest/server/queries/cases/instances/{{solicitacao}}/tasks/instances/pot-owners",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-execution-server",
+						"services",
+						"rest",
+						"server",
+						"queries",
+						"cases",
+						"instances",
+						"{{solicitacao}}",
+						"tasks",
+						"instances",
+						"pot-owners"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista instâncias de processos",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "denise.lezo",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "ancine1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZGVuaXNlLmxlem86YW5jaW5lMSE="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\" : \"RequestManagerApproval\",\n \"data\" : {\n   \"reason\" : \"Fixed hardware spec\"\n  }, \n \"description\" : \"Ask for manager approval again\",\n \"actors\" : \"diligenciado\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-execution-server/services/rest/server/containers/SIM_1.0/processes/instances",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-execution-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"SIM_1.0",
+						"processes",
+						"instances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enviando sinal",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "denise.lezo",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "ancine1!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZGVuaXNlLmxlem86YW5jaW5lMSE="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "true"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-execution-server/services/rest/server/containers/SIM_1.0/processes/instances/34/signal/Prorroga2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-execution-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"SIM_1.0",
+						"processes",
+						"instances",
+						"34",
+						"signal",
+						"Prorroga2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fecha caso",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"fechou \"\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-execution-server/services/rest/server/containers/SIM_1.0/cases/instances/{{caso}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-execution-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"SIM_1.0",
+						"cases",
+						"instances",
+						"{{caso}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

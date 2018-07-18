@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "e78bbfa1-2d69-3124-70ca-2075a537b216",
+		"name": "ITORDERS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Inicia novo caso",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic bWFjaWVrOm1hY2llazEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"case-data\" : {  },\n  \"case-user-assignments\" : {\n    \"owner\" : \"maciek\",\n    \"manager\" : \"krisv\"\n  },\n  \"case-group-assignments\" : {\n    \"supplier\" : \"IT\"\n }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-execution-server/services/rest/server/containers/itorders_1.0.0-SNAPSHOT/cases/itorders.orderhardware/instances",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-execution-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"itorders_1.0.0-SNAPSHOT",
+						"cases",
+						"itorders.orderhardware",
+						"instances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista instâncias do caso",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic bWFjaWVrOm1hY2llazEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"case-data\" : {  },\n  \"case-user-assignments\" : {\n    \"owner\" : \"maciek\",\n    \"manager\" : \"maciek\"\n  },\n  \"case-group-assignments\" : {\n    \"supplier\" : \"IT\"\n }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/containers/itorders_1.0.0-SNAPSHOT/cases/itorders.orderhardware/instances",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"itorders_1.0.0-SNAPSHOT",
+						"cases",
+						"itorders.orderhardware",
+						"instances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista case file",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic bWFjaWVrOm1hY2llazEh"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "true"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/containers/itorders_1.0.0-SNAPSHOT/cases/instances/IT-0000000001/caseFile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"itorders_1.0.0-SNAPSHOT",
+						"cases",
+						"instances",
+						"IT-0000000001",
+						"caseFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insere dado no case file",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic bWFjaWVrOm1hY2llazEh"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "true"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/containers/itorders_1.0.0-SNAPSHOT/cases/instances/IT-0000000001/caseFile/shipped",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"itorders_1.0.0-SNAPSHOT",
+						"cases",
+						"instances",
+						"IT-0000000001",
+						"caseFile",
+						"shipped"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria tarefa dinâmica",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic bWFjaWVrOm1hY2llazEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\" : \"RequestManagerApproval\",\n \"data\" : {\n   \"reason\" : \"Fixed hardware spec\"\n  }, \n \"description\" : \"Ask for manager approval again\",\n \"actors\" : \"manager\",\n \"groups\" : \"\" \n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/containers/itorders_1.0.0-SNAPSHOT/cases/instances/IT-0000000001/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"itorders_1.0.0-SNAPSHOT",
+						"cases",
+						"instances",
+						"IT-0000000001",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

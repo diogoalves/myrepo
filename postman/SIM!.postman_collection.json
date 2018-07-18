@@ -1,0 +1,356 @@
+{
+	"info": {
+		"_postman_id": "d6dc1a8d-c87f-5cfc-bf6e-90dcc8b74d06",
+		"name": "SIM!",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "recuperar-fontes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"tipo\": \"APRESENTACAO_PROJETO\",\n  \"payload\": {\n    \"projeto\": {\n      \"id\": \"1\",\n      \"titulo\": \"Tropa de Elite\",\n      \"tipologiaObra\": \"FC\",\n      \"segmentoMercado\": \"SEX\",\n      \"dataCriacao\": \"20/08/2016\",\n      \"duracaoTotal\": \"100\",\n      \"formato\": \"LONG\"\n    },\n    \"objeto\": {\n      \"informacaoMerito\": {\n        \"previsaoReceita\": {\n          \"cenariosRetorno\": [\n            {\n              \"segmento\": \"Salas de Cinema\",\n              \"comissaoRoyalties\": \"Comissão de Distribuição\",\n              \"porcentagem\": 0,\n              \"indices\": \"Público\",\n              \"cenarioPessimista\": 0,\n              \"cenarioRealista\": 0,\n              \"cenarioOtimista\": 0\n            },\n            {\n              \"segmento\": \"Vídeo domético - Venda\",\n              \"comissaoRoyalties\": \"Royalties - Produtor\",\n              \"porcentagem\": 0,\n              \"indices\": \"Quantidade\",\n              \"cenarioPessimista\": 0,\n              \"cenarioRealista\": 0,\n              \"cenarioOtimista\": 0\n            },\n            {\n              \"segmento\": \"Vídeo Doméstico - Locação\",\n              \"comissaoRoyalties\": \"Royalties - Produtor\",\n              \"porcentagem\": 0,\n              \"indices\": \"Quantidade\",\n              \"cenarioPessimista\": 0,\n              \"cenarioRealista\": 0,\n              \"cenarioOtimista\": 0\n            },\n            {\n              \"segmento\": \"TV Fechada - PPV\",\n              \"comissaoRoyalties\": \"Comissão de Distribuição\",\n              \"porcentagem\": 0,\n              \"indices\": \"Receita Bruta(R$)\",\n              \"cenarioPessimista\": 0,\n              \"cenarioRealista\": 0,\n              \"cenarioOtimista\": 0\n            },\n            {\n              \"segmento\": \"TV Aberta\",\n              \"comissaoRoyalties\": \"Comissão de Distribuição\",\n              \"porcentagem\": 0,\n              \"indices\": \"Receita Bruta(R$)\",\n              \"cenarioPessimista\": 0,\n              \"cenarioRealista\": 0,\n              \"cenarioOtimista\": 0\n            },\n            {\n              \"segmento\": \"VOD - Mídias Digitais\",\n              \"comissaoRoyalties\": \"Comissão de Distribuição\",\n              \"porcentagem\": 0,\n              \"indices\": \"Receita Bruta(R$)\",\n              \"cenarioPessimista\": 0,\n              \"cenarioRealista\": 0,\n              \"cenarioOtimista\": 0\n            },\n            {\n              \"segmento\": \"Internacional\",\n              \"comissaoRoyalties\": \"Comissão de Venda\",\n              \"porcentagem\": 0,\n              \"indices\": \"Receita Bruta(R$)\",\n              \"cenarioPessimista\": 0,\n              \"cenarioRealista\": 0,\n              \"cenarioOtimista\": 0\n            },\n            {\n              \"segmento\": \"Licenciamento\",\n              \"comissaoRoyalties\": \"Royalties - Produtor\",\n              \"porcentagem\": 0,\n              \"indices\": \"Receita Bruta(R$)\",\n              \"cenarioPessimista\": 0,\n              \"cenarioRealista\": 0,\n              \"cenarioOtimista\": 0\n            }\n          ]\n        }\n      },\n      \"estruturaContrato\": {\n        \"documentacaoDireito\": [\n          {\n            \"id\": 1,\n            \"documento\": \"Ato de constituição de representação ou instrumento de produção para fins exclusivos de solicitação de informações ou prestação de esclarecimentos junto à ANCINE acerca do projeto\",\n            \"anexo\": \"-\"\n          },\n          {\n            \"id\": 2,\n            \"documento\": \"Protocolo do registro do argumento na Fundação Biblioteca Nacional - FBN, ou o certificado de registro.\",\n            \"anexo\": \"-\"\n          },\n          {\n            \"id\": 3,\n            \"documento\": \"Contrato de cessão ou opção de direitos para constituição de obra derivada.\",\n            \"anexo\": \"-\"\n          },\n          {\n            \"id\": 4,\n            \"documento\": \"Contrato de distribuição e aditivos.\",\n            \"anexo\": \"-\"\n          },\n          {\n            \"id\": 5,\n            \"documento\": \"Contrato de pré-licenciamento com a Emissora/Programadora e aditivos.\",\n            \"anexo\": \"-\"\n          },\n          {\n            \"id\": 6,\n            \"documento\": \"Formulário de contratação.\",\n            \"anexo\": \"-\"\n          }\n        ]\n      },\n      \"planoFinancimento\": {\n        \"fontes\": [\n          {\n            \"id\": \"1\",\n            \"natureza\": \"Renúncia Fiscal\",\n            \"fonte\": \"ART. 1º - Lei 8.685/93 (Audiovisual)\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": \"30.123,21\"\n          },\n          {\n            \"id\": \"2\",\n            \"natureza\": \"Renúncia Fiscal\",\n            \"fonte\": \"ART. 1ºA - Lei 8.685/93 (Audiovisual)\",\n            \"modalidade\": \"Patrocínio\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"3\",\n            \"natureza\": \"Renúncia Fiscal\",\n            \"fonte\": \"ART. 3º - Lei 8.685/93 (Audiovisual)\",\n            \"modalidade\": \"Coprodução\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"4\",\n            \"natureza\": \"Renúncia Fiscal\",\n            \"fonte\": \"ART. 3ºA - Lei 8.685/93 (Audiovisual)\",\n            \"modalidade\": \"Coprodução\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"5\",\n            \"natureza\": \"Renúncia Fiscal\",\n            \"fonte\": \"ART. 39 - MP 2.228-1/01\",\n            \"modalidade\": \"Coprodução\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"6\",\n            \"natureza\": \"Renúncia Fiscal\",\n            \"fonte\": \"ART. 18 - Lei 8.313/91 (Rouanet)\",\n            \"modalidade\": \"Patrocínio\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"7\",\n            \"natureza\": \"Renúncia Fiscal\",\n            \"fonte\": \"ART. 25 - Lei 8.313/91 (Rouanet)\",\n            \"modalidade\": \"Patrocínio\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"8\",\n            \"natureza\": \"Renúncia Fiscal\",\n            \"fonte\": \"ART. 41 - MP 2.228-1/01 (Funcines)\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"9\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - PRODAV 01\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"15/7/2016\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"10\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - PRODAV 02\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"26/12/2016 \",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"11\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - PRODAV 03\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"12\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - PRODAV 04\",\n            \"modalidade\": \"Apoio\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"13\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - PRODAV 05\",\n            \"modalidade\": \"Apoio\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"14\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - PRODAV 06 - SUAT\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"15\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - PRODAV 07 - PAQ\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"16\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - TV PÚBLICA - PRODAV 08 – Norte\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"17\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - TV PÚBLICA - PRODAV 09 – Nordeste\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"18\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - TV PÚBLICA - PRODAV 10 – Centro-Oeste\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"19\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - TV PÚBLICA - PRODAV 11 – Sudeste\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"20\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - TV PÚBLICA - PRODAV 12 – Sul\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"21\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - PRODAV 13\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"22\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - PRODECINE 01\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"23\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - PRODECINE 02\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"24\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - PRODECINE 03\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"25\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - PRODECINE 04\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"15/3/2016\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"26\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - PRODECINE 05\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"27\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - PRODECINE 06\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"28\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - PRODECINE 07\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"29\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - PRODECINE 08\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"30\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - PRODECINE 09\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"31\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - PRODECINE 10\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"32\",\n            \"natureza\": \"FSA - Fundo Setorial do Audiovisual\",\n            \"fonte\": \"2016 - Arranjo Regional\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"33\",\n            \"natureza\": \"Orçamento Ancine\",\n            \"fonte\": \"2016 - Co-produção Brasil-Argentina\",\n            \"modalidade\": \"Apoio\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"34\",\n            \"natureza\": \"Orçamento Ancine\",\n            \"fonte\": \"2016 - Co-produção Brasil-Itália\",\n            \"modalidade\": \"Apoio\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"35\",\n            \"natureza\": \"Orçamento Ancine\",\n            \"fonte\": \"2016 - Co-produção Brasil-Portugal\",\n            \"modalidade\": \"Apoio\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"36\",\n            \"natureza\": \"Orçamento Ancine\",\n            \"fonte\": \"2016 - Co-produção Brasil-Uruguai\",\n            \"modalidade\": \"Apoio\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"37\",\n            \"natureza\": \"Outras Fontes\",\n            \"fonte\": \"Coprodutor Nacional\",\n            \"modalidade\": \"Coprodução\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"38\",\n            \"natureza\": \"Outras Fontes\",\n            \"fonte\": \"Coprodutor Internacional\",\n            \"modalidade\": \"Coprodução\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"39\",\n            \"natureza\": \"Outras Fontes\",\n            \"fonte\": \"Edital Público (Federal / Estadual / Municipal)\",\n            \"modalidade\": \"Investimento / Apoio\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"40\",\n            \"natureza\": \"Outras Fontes\",\n            \"fonte\": \"Leis Estaduais de Incentivo\",\n            \"modalidade\": \"Patrocínio\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"41\",\n            \"natureza\": \"Outras Fontes\",\n            \"fonte\": \"Leis Municipais de Incentivo\",\n            \"modalidade\": \"Patrocínio\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"42\",\n            \"natureza\": \"Outras Fontes\",\n            \"fonte\": \"Contrapartida Obrigatória\",\n            \"modalidade\": \"Própria\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"43\",\n            \"natureza\": \"Outras Fontes\",\n            \"fonte\": \"Recursos Próprios\",\n            \"modalidade\": \"Própria\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          },\n          {\n            \"id\": \"44\",\n            \"natureza\": \"Outras Fontes\",\n            \"fonte\": \"Fonte Adicionada\",\n            \"modalidade\": \"Investimento\",\n            \"prazo\": \"-\",\n            \"valor\": 0\n          }\n        ]\n      },\n      \"cpb\": \"E22-312421-32456\",\n      \"tipoObjetoFinanciavel\": 2,\n      \"resumo\": {\n        \"aceitaTermos\": true\n      }\n    }\n  }\n}"
+				},
+				"url": {
+					"raw": "http://192.168.21.44:8080/sin-web-api/rest/rules/recuperar-fontes-financiamento",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"21",
+						"44"
+					],
+					"port": "8080",
+					"path": [
+						"sin-web-api",
+						"rest",
+						"rules",
+						"recuperar-fontes-financiamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recuperar-fontes-financiamento",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJILW5QTkVlXzlMbmlNbFh4dFdwdGVPUEkwR0c4MzJzTHZ6MG9mcHRyQmxjIn0.eyJqdGkiOiI1MDE2Mzc2Ny1kODgwLTQwNWQtOGNkZi05OTM2MjY3NzRiMGMiLCJleHAiOjE1MDE2OTQ3NzYsIm5iZiI6MCwiaWF0IjoxNTAxNjk0NDc2LCJpc3MiOiJodHRwOi8vc3NvLmFuY2luZS5nb3YuYnI6ODE4MC9hdXRoL3JlYWxtcy9hbmNpbmUiLCJhdWQiOiJzaW4td2ViLWV4dGVybm8iLCJzdWIiOiJkZWI4OGUzNi1jYTVhLTRlOTYtOGM3ZS00Y2MwZjQzMzI3NjQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzaW4td2ViLWV4dGVybm8iLCJub25jZSI6ImMxMWRiMzUzLWIyZmYtNDhkYy04NDhiLWMwNjRlZmYxZDg0MCIsImF1dGhfdGltZSI6MTUwMTY5Mzc2NSwic2Vzc2lvbl9zdGF0ZSI6ImI2Zjg3YzhjLTgyNjUtNGIyZC1iMTkxLTRmNDc4MTFhMDY4NSIsImFjciI6IjAiLCJjbGllbnRfc2Vzc2lvbiI6ImJmNTAyZGRjLTY4M2UtNDk3OC1hNmZhLWQwMTQ2N2IwMmQ2NiIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjgwODAvZXh0ZXJuYWwiLCIqIiwiaHR0cDovLzE5Mi4xNjguMjEuNDQ6OTAwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiU0lNX1BST1BPTkVOVEUiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50Iiwidmlldy1wcm9maWxlIl19fSwibmFtZSI6IlByb3BvbmVudGUgVXNlciIsInByZWZlcnJlZF91c2VybmFtZSI6InByb3BvbmVudGUudXNlciIsImdpdmVuX25hbWUiOiJQcm9wb25lbnRlIiwiZmFtaWx5X25hbWUiOiJVc2VyIn0.NAs4PV8exOI3Y6huBV2INc5iAnsUyqLspF12k0VVr7ljOImbPiN5QRjY-ERkshs88EyTEjJC2EUNQVmulSNJfos8qGhCowdkxBs9YXWF4lRxKaVp7ZDrN_IkQhXEU1rNICVWWg5yw49Y_V3mw0lCSet17jTb928deVMjBQ33tg70NYERVLYhtIAULOwFXLULDLVAvkfI4CaC7mqBoJJjq4-YlFh6WYyVovh3h-ZZ1Dx5Gfz2ml0F_2dDzjYprkLRnaDmjWqE2Qo5Pea7Unv-yt6bgsLy7D8QEQsLVV6VGO7gCwdPk_4VN_CEkxP-s1WD18aebg-dea8ypEsrFRhcAA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"payload\":{\"projeto\":{\"segmentoMercado\":\"SEX\",\"tipologia\":\"FC\",\"formato\":\"LONG\"}}}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/sin-web-api/rest/rules/recuperar-fontes-financiamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sin-web-api",
+						"rest",
+						"rules",
+						"recuperar-fontes-financiamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "criticar-valores-fontes-financiamento",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"tipo\": \"RECUPERAR_FONTES_FINANCIAMENTO\",\n  \"payload\": {\n    \"projeto\": {\n      \"fontesFinanciamento\": [\n        {\n          \"ano\": 2016,\n          \"valor\": \"0,01\",\n          \"rowKey\": \"PRODEC8COP\",\n          \"codigoNatureza\": \"FSA\",\n          \"descricao\": \"2016 - PRODECINE 08\",\n          \"natureza\": \"Fundo Setorial Audiovisual\",\n          \"informacoes\": null,\n          \"prazo\": null,\n          \"fonte\": \"PRODECINE 08\",\n          \"modalidade\": {\n            \"codigo\": \"COP\",\n            \"descricao\": \"Coprodução\"\n          },\n          \"id\": 30,\n          \"apelido\": \"PRODEC8\"\n        },\n        {\n          \"ano\": 2016,\n          \"valor\": 0,\n          \"rowKey\": \"PRODEC10COP\",\n          \"codigoNatureza\": \"FSA\",\n          \"descricao\": \"2016 - PRODECINE 10\",\n          \"natureza\": \"Fundo Setorial Audiovisual\",\n          \"informacoes\": null,\n          \"prazo\": null,\n          \"fonte\": \"PRODECINE 10\",\n          \"modalidade\": {\n            \"codigo\": \"COP\",\n            \"descricao\": \"Coprodução\"\n          },\n          \"id\": 32,\n          \"apelido\": \"PRODEC10\"\n        },\n        {\n          \"ano\": 2016,\n          \"valor\": 0,\n          \"rowKey\": \"PRODEC4INV\",\n          \"codigoNatureza\": \"FSA\",\n          \"descricao\": \"2016 - PRODECINE 04\",\n          \"natureza\": \"Fundo Setorial Audiovisual\",\n          \"informacoes\": null,\n          \"prazo\": null,\n          \"fonte\": \"PRODECINE 04\",\n          \"modalidade\": {\n            \"codigo\": \"INV\",\n            \"descricao\": \"Investimento\"\n          },\n          \"id\": 26,\n          \"apelido\": \"PRODEC4\"\n        },\n        {\n          \"ano\": 2016,\n          \"valor\": 0,\n          \"rowKey\": \"PRODEC7COP\",\n          \"codigoNatureza\": \"FSA\",\n          \"descricao\": \"2016 - PRODECINE 07\",\n          \"natureza\": \"Fundo Setorial Audiovisual\",\n          \"informacoes\": null,\n          \"prazo\": null,\n          \"fonte\": \"PRODECINE 07\",\n          \"modalidade\": {\n            \"codigo\": \"COP\",\n            \"descricao\": \"Coprodução\"\n          },\n          \"id\": 29,\n          \"apelido\": \"PRODEC7\"\n        },\n        {\n          \"ano\": 2016,\n          \"valor\": 0,\n          \"rowKey\": \"PRODAV6INV\",\n          \"codigoNatureza\": \"FSA\",\n          \"descricao\": \"2016 - PRODAV 06\",\n          \"natureza\": \"Fundo Setorial Audiovisual\",\n          \"informacoes\": null,\n          \"prazo\": null,\n          \"fonte\": \"PRODAV 06\",\n          \"modalidade\": {\n            \"codigo\": \"INV\",\n            \"descricao\": \"Investimento\"\n          },\n          \"id\": 41,\n          \"apelido\": \"PRODAV6\"\n        },\n        {\n          \"ano\": 2016,\n          \"valor\": 0,\n          \"rowKey\": \"PRODAV7INV\",\n          \"codigoNatureza\": \"FSA\",\n          \"descricao\": \"2016 - PRODAV 07\",\n          \"natureza\": \"Fundo Setorial Audiovisual\",\n          \"informacoes\": null,\n          \"prazo\": null,\n          \"fonte\": \"PRODAV 07\",\n          \"modalidade\": {\n            \"codigo\": \"INV\",\n            \"descricao\": \"Investimento\"\n          },\n          \"id\": 42,\n          \"apelido\": \"PRODAV7\"\n        },\n        {\n          \"ano\": 2016,\n          \"valor\": 0,\n          \"rowKey\": \"PRODEC3INV\",\n          \"codigoNatureza\": \"FSA\",\n          \"descricao\": \"2016 - PRODECINE 03\",\n          \"natureza\": \"Fundo Setorial Audiovisual\",\n          \"informacoes\": null,\n          \"prazo\": null,\n          \"fonte\": \"PRODECINE 03\",\n          \"modalidade\": {\n            \"codigo\": \"INV\",\n            \"descricao\": \"Investimento\"\n          },\n          \"id\": 25,\n          \"apelido\": \"PRODEC3\"\n        },\n        {\n          \"ano\": 2016,\n          \"valor\": 0,\n          \"rowKey\": \"PRODEC5INV\",\n          \"codigoNatureza\": \"FSA\",\n          \"descricao\": \"2016 - PRODECINE 05\",\n          \"natureza\": \"Fundo Setorial Audiovisual\",\n          \"informacoes\": null,\n          \"prazo\": null,\n          \"fonte\": \"PRODECINE 05\",\n          \"modalidade\": {\n            \"codigo\": \"INV\",\n            \"descricao\": \"Investimento\"\n          },\n          \"id\": 27,\n          \"apelido\": \"PRODEC5\"\n        },\n        {\n          \"ano\": 2016,\n          \"valor\": 0,\n          \"rowKey\": \"PRODEC1INV\",\n          \"codigoNatureza\": \"FSA\",\n          \"descricao\": \"2016 - PRODECINE 01\",\n          \"natureza\": \"Fundo Setorial Audiovisual\",\n          \"informacoes\": null,\n          \"prazo\": null,\n          \"fonte\": \"PRODECINE 01\",\n          \"modalidade\": {\n            \"codigo\": \"INV\",\n            \"descricao\": \"Investimento\"\n          },\n          \"id\": 23,\n          \"apelido\": \"PRODEC1\"\n        },\n        {\n          \"ano\": 2016,\n          \"valor\": 0,\n          \"rowKey\": \"PRODEC9COP\",\n          \"codigoNatureza\": \"FSA\",\n          \"descricao\": \"2016 - PRODECINE 09\",\n          \"natureza\": \"Fundo Setorial Audiovisual\",\n          \"informacoes\": null,\n          \"prazo\": null,\n          \"fonte\": \"PRODECINE 09\",\n          \"modalidade\": {\n            \"codigo\": \"COP\",\n            \"descricao\": \"Coprodução\"\n          },\n          \"id\": 31,\n          \"apelido\": \"PRODEC9\"\n        },\n        {\n          \"ano\": 2010,\n          \"valor\": 0,\n          \"rowKey\": \"ART3AINV\",\n          \"codigoNatureza\": \"RF\",\n          \"descricao\": \"ART. 3º A - Lei 8.685/93\",\n          \"natureza\": \"Renúncia Fiscal\",\n          \"informacoes\": \"Contratos decorrentes da utilização dos mecanismos dispostos nos art. 3º-A da Lei 8.685/93, observadas, no que couber, as normas específicas expedidas pela ANCINE.\",\n          \"prazo\": null,\n          \"fonte\": \"ART. 3º A - Lei 8.685/93\",\n          \"modalidade\": {\n            \"codigo\": \"INV\",\n            \"descricao\": \"Investimento\"\n          },\n          \"id\": 2,\n          \"apelido\": \"ART3A\"\n        },\n        {\n          \"ano\": 2010,\n          \"valor\": 0,\n          \"rowKey\": \"ART39COP\",\n          \"codigoNatureza\": \"RF\",\n          \"descricao\": \"ART. 39 - MP 2.228-1/01\",\n          \"natureza\": \"Renúncia Fiscal\",\n          \"informacoes\": \"Contratos decorrentes da utilização dos mecanismos dispostos no inciso X do art. 39 da MP 2.228-1/01, observadas, no que couber, as normas específicas expedidas pela ANCINE.\",\n          \"prazo\": null,\n          \"fonte\": \"ART. 39 - MP 2.228-1/01\",\n          \"modalidade\": {\n            \"codigo\": \"COP\",\n            \"descricao\": \"Coprodução\"\n          },\n          \"id\": 7,\n          \"apelido\": \"ART39\"\n        },\n        {\n          \"ano\": 2010,\n          \"valor\": \"0,01\",\n          \"rowKey\": \"ART41INV\",\n          \"codigoNatureza\": \"RF\",\n          \"descricao\": \"ART. 41 - MP 2.228-1/01 (Funcines)\",\n          \"natureza\": \"Renúncia Fiscal\",\n          \"informacoes\": \"Memorandos de investimento firmados com Fundos de Financiamento da Indústria Cinematográfica – FUNCINES, nos termos do artigo 41 da Medida Provisória nº. 2.228-1/01\",\n          \"prazo\": null,\n          \"fonte\": \"ART. 41 - MP 2.228-1/01 (Funcines)\",\n          \"modalidade\": {\n            \"codigo\": \"INV\",\n            \"descricao\": \"Investimento\"\n          },\n          \"id\": 10,\n          \"apelido\": \"ART41\"\n        },\n        {\n          \"ano\": 2010,\n          \"valor\": 0,\n          \"rowKey\": \"ART1APAT\",\n          \"codigoNatureza\": \"RF\",\n          \"descricao\": \"ART. 1º A - Lei 8.685/93\",\n          \"natureza\": \"Renúncia Fiscal\",\n          \"informacoes\": \"Recibos de captação ou contratos de patrocínio pelo art. 1º-A da Lei nº 8.685/93.\",\n          \"prazo\": null,\n          \"fonte\": \"ART. 1º A - Lei 8.685/93\",\n          \"modalidade\": {\n            \"codigo\": \"PAT\",\n            \"descricao\": \"Patrocínio\"\n          },\n          \"id\": 6,\n          \"apelido\": \"ART1A\"\n        },\n        {\n          \"ano\": 2010,\n          \"valor\": 0,\n          \"rowKey\": \"ART3INV\",\n          \"codigoNatureza\": \"RF\",\n          \"descricao\": \"ART. 3º - Lei 8.685/93\",\n          \"natureza\": \"Renúncia Fiscal\",\n          \"informacoes\": \"Contratos decorrentes da utilização dos mecanismos dispostos no art. 3º da Lei 8.685/93, observadas, no que couber, as normas específicas expedidas pela ANCINE.\",\n          \"prazo\": null,\n          \"fonte\": \"ART. 3º - Lei 8.685/93\",\n          \"modalidade\": {\n            \"codigo\": \"INV\",\n            \"descricao\": \"Investimento\"\n          },\n          \"id\": 1,\n          \"apelido\": \"ART3\"\n        }\n      ]\n    }\n  }\n}"
+				},
+				"url": {
+					"raw": "http://192.168.21.44:8080/sin-web-api/rest/rules/criticar-valores-fontes-financiamento",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"21",
+						"44"
+					],
+					"port": "8080",
+					"path": [
+						"sin-web-api",
+						"rest",
+						"rules",
+						"criticar-valores-fontes-financiamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/solicitacoes?usuario=diogo.alves",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"tipo\": \"APRESENTAR_PROJETO\",\n  \"payload\": {\n    \"projeto\": {\n      \"dataCriacao\": \"24/05/2017\",\n      \"segmentoMercado\": \"SEX\",\n      \"tipologia\": \"DC\",\n      \"duracaoTotal\": 12,\n      \"formato\": \"CURT\",\n      \"titulo\": \"Teste submissão\",\n      \"id\": \"81019621-9582-4caf-abe0-08c6e53339ea\",\n      \"fontes\": null,\n      \"objeto\": {\n        \"tipoObjetoFinanciavel\": 1,\n        \"planoFinanciamento\": {\n          \"fontes\": [\n            {\n              \"ano\": 2016,\n              \"valor\": 0,\n              \"rowKey\": \"PRODEC5INV\",\n              \"codigoNatureza\": \"FSA\",\n              \"descricao\": \"2016 - PRODECINE 05\",\n              \"natureza\": \"Fundo Setorial Audiovisual\",\n              \"informacoes\": null,\n              \"prazo\": null,\n              \"fonte\": \"PRODECINE 05\",\n              \"modalidade\": {\n                \"codigo\": \"INV\",\n                \"descricao\": \"Investimento\"\n              },\n              \"id\": 27,\n              \"apelido\": \"PRODEC5\"\n            },\n            {\n              \"ano\": 2016,\n              \"valor\": 0,\n              \"rowKey\": \"PRODEC1INV\",\n              \"codigoNatureza\": \"FSA\",\n              \"descricao\": \"2016 - PRODECINE 01\",\n              \"natureza\": \"Fundo Setorial Audiovisual\",\n              \"informacoes\": null,\n              \"prazo\": null,\n              \"fonte\": \"PRODECINE 01\",\n              \"modalidade\": {\n                \"codigo\": \"INV\",\n                \"descricao\": \"Investimento\"\n              },\n              \"id\": 23,\n              \"apelido\": \"PRODEC1\"\n            },\n            {\n              \"ano\": 2016,\n              \"valor\": 0,\n              \"rowKey\": \"PRODEC7COP\",\n              \"codigoNatureza\": \"FSA\",\n              \"descricao\": \"2016 - PRODECINE 07\",\n              \"natureza\": \"Fundo Setorial Audiovisual\",\n              \"informacoes\": null,\n              \"prazo\": null,\n              \"fonte\": \"PRODECINE 07\",\n              \"modalidade\": {\n                \"codigo\": \"COP\",\n                \"descricao\": \"Coprodução\"\n              },\n              \"id\": 29,\n              \"apelido\": \"PRODEC7\"\n            },\n            {\n              \"ano\": 2016,\n              \"valor\": 0,\n              \"rowKey\": \"PRODAV7INV\",\n              \"codigoNatureza\": \"FSA\",\n              \"descricao\": \"2016 - PRODAV 07\",\n              \"natureza\": \"Fundo Setorial Audiovisual\",\n              \"informacoes\": null,\n              \"prazo\": null,\n              \"fonte\": \"PRODAV 07\",\n              \"modalidade\": {\n                \"codigo\": \"INV\",\n                \"descricao\": \"Investimento\"\n              },\n              \"id\": 42,\n              \"apelido\": \"PRODAV7\"\n            },\n            {\n              \"ano\": 2016,\n              \"valor\": 0,\n              \"rowKey\": \"PRODEC3INV\",\n              \"codigoNatureza\": \"FSA\",\n              \"descricao\": \"2016 - PRODECINE 03\",\n              \"natureza\": \"Fundo Setorial Audiovisual\",\n              \"informacoes\": null,\n              \"prazo\": null,\n              \"fonte\": \"PRODECINE 03\",\n              \"modalidade\": {\n                \"codigo\": \"INV\",\n                \"descricao\": \"Investimento\"\n              },\n              \"id\": 25,\n              \"apelido\": \"PRODEC3\"\n            },\n            {\n              \"ano\": 2016,\n              \"valor\": 0,\n              \"rowKey\": \"PRODEC9COP\",\n              \"codigoNatureza\": \"FSA\",\n              \"descricao\": \"2016 - PRODECINE 09\",\n              \"natureza\": \"Fundo Setorial Audiovisual\",\n              \"informacoes\": null,\n              \"prazo\": null,\n              \"fonte\": \"PRODECINE 09\",\n              \"modalidade\": {\n                \"codigo\": \"COP\",\n                \"descricao\": \"Coprodução\"\n              },\n              \"id\": 31,\n              \"apelido\": \"PRODEC9\"\n            },\n            {\n              \"ano\": 2016,\n              \"valor\": 0,\n              \"rowKey\": \"PRODEC8COP\",\n              \"codigoNatureza\": \"FSA\",\n              \"descricao\": \"2016 - PRODECINE 08\",\n              \"natureza\": \"Fundo Setorial Audiovisual\",\n              \"informacoes\": null,\n              \"prazo\": null,\n              \"fonte\": \"PRODECINE 08\",\n              \"modalidade\": {\n                \"codigo\": \"COP\",\n                \"descricao\": \"Coprodução\"\n              },\n              \"id\": 30,\n              \"apelido\": \"PRODEC8\"\n            },\n            {\n              \"ano\": 2016,\n              \"valor\": 0,\n              \"rowKey\": \"PRODEC4INV\",\n              \"codigoNatureza\": \"FSA\",\n              \"descricao\": \"2016 - PRODECINE 04\",\n              \"natureza\": \"Fundo Setorial Audiovisual\",\n              \"informacoes\": null,\n              \"prazo\": null,\n              \"fonte\": \"PRODECINE 04\",\n              \"modalidade\": {\n                \"codigo\": \"INV\",\n                \"descricao\": \"Investimento\"\n              },\n              \"id\": 26,\n              \"apelido\": \"PRODEC4\"\n            },\n            {\n              \"ano\": 2016,\n              \"valor\": 0,\n              \"rowKey\": \"PRODAV6INV\",\n              \"codigoNatureza\": \"FSA\",\n              \"descricao\": \"2016 - PRODAV 06\",\n              \"natureza\": \"Fundo Setorial Audiovisual\",\n              \"informacoes\": null,\n              \"prazo\": null,\n              \"fonte\": \"PRODAV 06\",\n              \"modalidade\": {\n                \"codigo\": \"INV\",\n                \"descricao\": \"Investimento\"\n              },\n              \"id\": 41,\n              \"apelido\": \"PRODAV6\"\n            },\n            {\n              \"ano\": 2016,\n              \"valor\": 0,\n              \"rowKey\": \"PRODEC10COP\",\n              \"codigoNatureza\": \"FSA\",\n              \"descricao\": \"2016 - PRODECINE 10\",\n              \"natureza\": \"Fundo Setorial Audiovisual\",\n              \"informacoes\": null,\n              \"prazo\": null,\n              \"fonte\": \"PRODECINE 10\",\n              \"modalidade\": {\n                \"codigo\": \"COP\",\n                \"descricao\": \"Coprodução\"\n              },\n              \"id\": 32,\n              \"apelido\": \"PRODEC10\"\n            },\n            {\n              \"ano\": 2010,\n              \"valor\": 0,\n              \"rowKey\": \"ART41INV\",\n              \"codigoNatureza\": \"RF\",\n              \"descricao\": \"ART. 41 - MP 2.228-1/01 (Funcines)\",\n              \"natureza\": \"Renúncia Fiscal\",\n              \"informacoes\": \"Memorandos de investimento firmados com Fundos de Financiamento da Indústria Cinematográfica – FUNCINES, nos termos do artigo 41 da Medida Provisória nº. 2.228-1/01\",\n              \"prazo\": null,\n              \"fonte\": \"ART. 41 - MP 2.228-1/01 (Funcines)\",\n              \"modalidade\": {\n                \"codigo\": \"INV\",\n                \"descricao\": \"Investimento\"\n              },\n              \"id\": 10,\n              \"apelido\": \"ART41\"\n            },\n            {\n              \"ano\": 2010,\n              \"valor\": 0,\n              \"rowKey\": \"ART3AINV\",\n              \"codigoNatureza\": \"RF\",\n              \"descricao\": \"ART. 3º A - Lei 8.685/93\",\n              \"natureza\": \"Renúncia Fiscal\",\n              \"informacoes\": \"Contratos decorrentes da utilização dos mecanismos dispostos nos art. 3º-A da Lei 8.685/93, observadas, no que couber, as normas específicas expedidas pela ANCINE.\",\n              \"prazo\": null,\n              \"fonte\": \"ART. 3º A - Lei 8.685/93\",\n              \"modalidade\": {\n                \"codigo\": \"INV\",\n                \"descricao\": \"Investimento\"\n              },\n              \"id\": 2,\n              \"apelido\": \"ART3A\"\n            },\n            {\n              \"ano\": 2010,\n              \"valor\": 0,\n              \"rowKey\": \"ART39COP\",\n              \"codigoNatureza\": \"RF\",\n              \"descricao\": \"ART. 39 - MP 2.228-1/01\",\n              \"natureza\": \"Renúncia Fiscal\",\n              \"informacoes\": \"Contratos decorrentes da utilização dos mecanismos dispostos no inciso X do art. 39 da MP 2.228-1/01, observadas, no que couber, as normas específicas expedidas pela ANCINE.\",\n              \"prazo\": null,\n              \"fonte\": \"ART. 39 - MP 2.228-1/01\",\n              \"modalidade\": {\n                \"codigo\": \"COP\",\n                \"descricao\": \"Coprodução\"\n              },\n              \"id\": 7,\n              \"apelido\": \"ART39\"\n            },\n            {\n              \"ano\": 2010,\n              \"valor\": 0,\n              \"rowKey\": \"ART1APAT\",\n              \"codigoNatureza\": \"RF\",\n              \"descricao\": \"ART. 1º A - Lei 8.685/93\",\n              \"natureza\": \"Renúncia Fiscal\",\n              \"informacoes\": \"Recibos de captação ou contratos de patrocínio pelo art. 1º-A da Lei nº 8.685/93.\",\n              \"prazo\": null,\n              \"fonte\": \"ART. 1º A - Lei 8.685/93\",\n              \"modalidade\": {\n                \"codigo\": \"PAT\",\n                \"descricao\": \"Patrocínio\"\n              },\n              \"id\": 6,\n              \"apelido\": \"ART1A\"\n            },\n            {\n              \"ano\": 2010,\n              \"valor\": 0,\n              \"rowKey\": \"ART3INV\",\n              \"codigoNatureza\": \"RF\",\n              \"descricao\": \"ART. 3º - Lei 8.685/93\",\n              \"natureza\": \"Renúncia Fiscal\",\n              \"informacoes\": \"Contratos decorrentes da utilização dos mecanismos dispostos no art. 3º da Lei 8.685/93, observadas, no que couber, as normas específicas expedidas pela ANCINE.\",\n              \"prazo\": null,\n              \"fonte\": \"ART. 3º - Lei 8.685/93\",\n              \"modalidade\": {\n                \"codigo\": \"INV\",\n                \"descricao\": \"Investimento\"\n              },\n              \"id\": 1,\n              \"apelido\": \"ART3\"\n            }\n          ]\n        },\n        \"id\": \"c5cbacb7-231b-4fec-9552-0fd317aaaac2\",\n        \"resumo\": {\n          \"aceitaTermos\": true\n        }\n      }\n    }\n  }\n}"
+				},
+				"url": {
+					"raw": "http://192.168.21.44:8080/sin-web-api/rest/solicitacoes?usuario=diogo.alves",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"21",
+						"44"
+					],
+					"port": "8080",
+					"path": [
+						"sin-web-api",
+						"rest",
+						"solicitacoes"
+					],
+					"query": [
+						{
+							"key": "usuario",
+							"value": "diogo.alves"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/tarefas/diogo.alves",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"payload\":{\"projeto\":{\"segmentoMercado\":\"SEX\",\"tipologia\":\"FC\",\"formato\":\"LONG\"}}}\n"
+				},
+				"url": {
+					"raw": "http://192.168.21.44:8080/sin-web-api/rest/tarefas/diogo.alves",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"21",
+						"44"
+					],
+					"port": "8080",
+					"path": [
+						"sin-web-api",
+						"rest",
+						"tarefas",
+						"diogo.alves"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/tarefas/{id}/concluir?usuario=diogo.alves",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/plain"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "Comentário 123"
+				},
+				"url": {
+					"raw": "http://192.168.21.44:8080/sin-web-api/rest/tarefas/{id}/concluir?usuario=diogo.alves",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"21",
+						"44"
+					],
+					"port": "8080",
+					"path": [
+						"sin-web-api",
+						"rest",
+						"tarefas",
+						"{id}",
+						"concluir"
+					],
+					"query": [
+						{
+							"key": "usuario",
+							"value": "diogo.alves"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tasks direto do keyserver",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "diogo.alves",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mudar@123",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZGlvZ28uYWx2ZXM6TXVkYXJAMTIz"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "Comentário 123"
+				},
+				"url": {
+					"raw": "http://192.168.21.45:8080/kie-server/services/rest/server/queries/tasks/instances/pot-owners?page=0&pageSize=200&sort=&sortOrder=true",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"21",
+						"45"
+					],
+					"port": "8080",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"queries",
+						"tasks",
+						"instances",
+						"pot-owners"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "200"
+						},
+						{
+							"key": "sort",
+							"value": ""
+						},
+						{
+							"key": "sortOrder",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cria uma nova tarefa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"perfilResponsavel\": \"\",\n    \"usuarioResponsavel\" : \"coord_triagem_1\",\n    \"nomeExibicaoTarefa\" : \"Responder 1234\",\n    \"codigoTarefa\" : \"Responder 12345\",\n    \"usuarioCriador\" : \"diogo.alves\",\n    \"descricaoTarefa\" : \"resposta 12332121312\",\n    \"documentacaoTarefa\" : \"aaa\"\n}"
+				},
+				"url": {
+					"raw": "http://192.168.21.44:8080/sin-web-api/rest/processos/7258/tarefas",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"21",
+						"44"
+					],
+					"port": "8080",
+					"path": [
+						"sin-web-api",
+						"rest",
+						"processos",
+						"7258",
+						"tarefas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
